@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bo1ti51bkrmdu"
+path="res://.godot/imported/The Last Of us - Theme song (1).mp3-41def1e96f4fa385670f6e27b9212391.mp3str"
+
+[deps]
+
+source_file="res://The Last Of us - Theme song (1).mp3"
+dest_files=["res://.godot/imported/The Last Of us - Theme song (1).mp3-41def1e96f4fa385670f6e27b9212391.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

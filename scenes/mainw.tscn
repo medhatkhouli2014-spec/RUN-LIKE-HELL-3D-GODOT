@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://imo6nj28js0l"]
+
+[ext_resource type="PackedScene" uid="uid://bk15rwjmpxgqi" path="res://main.tscn" id="1_sx58o"]
+
+[node name="Main" instance=ExtResource("1_sx58o")]
+
+[editable path="Building/WallDoorway2"]
+[editable path="Building/WallDoorway2/wall_doorway2"]

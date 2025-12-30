@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://deuy83ht8tyd8"
+path="res://.godot/imported/Call Of Duty Black Ops 2  Effect Sound ByeBye.mp3-bc6bc191f0c4c25f4a0fe2861d0aa4c3.mp3str"
+
+[deps]
+
+source_file="res://Materials/Abandoned_House/Abandoned_House/Models/Call Of Duty Black Ops 2  Effect Sound ByeBye.mp3"
+dest_files=["res://.godot/imported/Call Of Duty Black Ops 2  Effect Sound ByeBye.mp3-bc6bc191f0c4c25f4a0fe2861d0aa4c3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

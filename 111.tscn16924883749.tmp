@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bixelmmnk8rh0"]
+
+[ext_resource type="Script" uid="uid://0jr6cvqcvl4u" path="res://111.gd" id="1_cubec"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6pbiq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cubec"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_cubec")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_6pbiq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_cubec")

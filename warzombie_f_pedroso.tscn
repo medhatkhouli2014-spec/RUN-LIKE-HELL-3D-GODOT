@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqj3ls0qpakio"]
+
+[ext_resource type="PackedScene" uid="uid://dtv2tp2elfdn2" path="res://Warzombie F Pedroso.fbx" id="1_kf57q"]
+
+[node name="Warzombie F Pedroso" instance=ExtResource("1_kf57q")]

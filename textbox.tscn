@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://badeiy5c7u22h"]
+
+[ext_resource type="Script" uid="uid://bwf66ghqqpqxw" path="res://textbox.gd" id="1_vng66"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_us7u2"]
+bg_color = Color(0.004019165, 0.004019165, 0.004019165, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(15.300001, 15.300001, 15.300001, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vng66"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vng66"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_vng66")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -330.0
+offset_top = 12.0
+offset_right = 98.0
+offset_bottom = 80.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = -67
+theme_override_constants/margin_right = -16
+theme_override_constants/margin_bottom = -16
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_us7u2")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="MarginContainer/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vng66")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "تم اخذ العلاج انتهت المهمة اذهب الى المروحيه"
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_vng66")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cum5knv0wbygt"]
+
+[ext_resource type="PackedScene" uid="uid://dkq8ir18hwtfi" path="res://scenes/stim-luna-has-gone-prop/source/STIM export.fbx" id="1_csk0i"]
+[ext_resource type="Script" uid="uid://bge8lxnhaobg5" path="res://afs.gd" id="1_le4m0"]
+[ext_resource type="Script" uid="uid://kkdukwi3s522" path="res://area_3d.gd" id="2_oe44k"]
+[ext_resource type="PackedScene" uid="uid://badeiy5c7u22h" path="res://textbox.tscn" id="4_vhoyl"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_oe44k"]
+height = 0.04147412
+radius = 0.02734375
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_le4m0")
+
+[node name="STIM export" parent="." instance=ExtResource("1_csk0i")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="STIM export"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("2_oe44k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="STIM export/Area3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="STIM export/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0016794521, 0)
+shape = SubResource("CylinderShape3D_oe44k")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("4_vhoyl")]
+
+[connection signal="body_entered" from="STIM export/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="STIM export/Area3D" to="STIM export/Area3D" method="_on_body_entered"]

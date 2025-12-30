@@ -1,0 +1,279 @@
+[gd_scene load_steps=12 format=3 uid="uid://c3xrsfuvqh8ne"]
+
+[ext_resource type="Texture2D" uid="uid://yw2y3tp3f8mv" path="res://Screenshot 2025-12-25 151101.png" id="1_t1red"]
+[ext_resource type="Script" uid="uid://c86b2l76xvh2e" path="res://cut.gd" id="1_udgh4"]
+[ext_resource type="Texture2D" uid="uid://cl7223hav6vld" path="res://Screenshot 2025-12-25 151121.png" id="2_kybe3"]
+[ext_resource type="Texture2D" uid="uid://cjy04fnlomqme" path="res://Screenshot 2025-12-25 151135.png" id="3_udgh4"]
+[ext_resource type="Texture2D" uid="uid://dwcdy5g542bmy" path="res://Screenshot 2025-12-25 151202.png" id="4_0obaw"]
+
+[sub_resource type="Animation" id="Animation_kybe3"]
+resource_name = "animation"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 4.14, 7.986519),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_udgh4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0obaw"]
+resource_name = "animation2"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.9345415, 6.897075, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.9607843), Color(1, 1, 1, 0.9607843), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_i2u5u"]
+resource_name = "animation3"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.1077986, 6.2220945, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wahod"]
+resource_name = "animation4"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9707991, 5.0244546, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p1gyr"]
+_data = {
+&"RESET": SubResource("Animation_udgh4"),
+&"animation": SubResource("Animation_kybe3"),
+&"animation2": SubResource("Animation_0obaw"),
+&"animation3": SubResource("Animation_i2u5u"),
+&"animation4": SubResource("Animation_wahod")
+}
+
+[node name="CUT" type="CanvasLayer"]
+script = ExtResource("1_udgh4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" type="Control" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_t1red")
+
+[node name="Label" type="Label" parent="Control/1/TextureRect"]
+layout_mode = 0
+offset_left = 692.0
+offset_top = 923.0
+offset_right = 1915.0
+offset_bottom = 1066.0
+theme_override_font_sizes/font_size = 32
+text = "في عالمٍ انقطعت فيه الأصوات البشرية، وانتشر فيه الصمت كمرضٍ آخر، ظهرت الحقيقة المرعبة: 
+وباءٌ طفيليّ لا يقتل الجسد مباشرة، بل يسرق العقول ويحوّل البشر إلى أدواتٍ بلا إرادة                 .
+المنطقة المحظورة أصبحت بؤرة الخطر، لا يدخلها أحد ويخرج كما كان… إن خرج أصلًا                 ."
+
+[node name="2" type="Control" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kybe3")
+
+[node name="Label" type="Label" parent="Control/2/TextureRect"]
+layout_mode = 0
+offset_left = 924.0
+offset_top = 722.0
+offset_right = 1907.0
+offset_bottom = 1055.0
+theme_override_font_sizes/font_size = 32
+text = "أنت الناجي الوحيد القادر على التوغّل في قلب هذا الجحيم                             .
+ مهمتك ليست سهلة: التسلل بين المصابين دون أن يلاحظوك،                        
+ مواجهة من فقدوا إنسانيتهم، والبحث عن العلاج المخبّأ في مكانٍ لا يعرفه أحد. 
+كل خطوة قد تكون الأخيرة، وكل قرار قد يحدّد مصير البشرية                            .
+وعندما تعثر على العلاج، لن ينتهي الخطر                                                        .
+ يجب أن تصل إلى المروحية، النقطة الأخيرة قبل الانهيار الكامل،                        
+ حيث يمكن تحويل هذا الأمل الصغير إلى علاجٍ ينقذ العالم… أو يضيع إلى الأبد."
+
+[node name="3" type="Control" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_udgh4")
+
+[node name="Label" type="Label" parent="Control/3/TextureRect"]
+layout_mode = 0
+offset_left = 597.0
+offset_top = 931.0
+offset_right = 1903.0
+offset_bottom = 1074.0
+theme_override_font_sizes/font_size = 32
+text = "الوقت ينفد، والظلام يطبق على المكان، وأصوات الخطوات خلفك تذكّرك بأنك لست وحدك                    
+. بيدٍ تحمل العلاج، وبالأخرى سلاحك المتعب، تندفع نحو المروحية، مدركًا أن سقوطك يعني نهاية كل شيء."
+
+[node name="4" type="Control" parent="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_0obaw")
+
+[node name="Label" type="Label" parent="Control/4/TextureRect"]
+layout_mode = 0
+offset_left = 912.0
+offset_top = 817.0
+offset_right = 2135.0
+offset_bottom = 1054.0
+theme_override_font_sizes/font_size = 32
+text = "فإما أن تقلع ومعك الأمل، ليبدأ سباق إنتاج العلاج وإنقاذ ما تبقى من العالم…
+أو تُدفن الحقيقة في هذه المنطقة المحظورة، ويبتلع الوباء آخر فرصة للنجاة.
+وفي تلك اللحظة الفاصلة، يتوقف مصير البشرية على قرار واحد                     
+هذه ليست مجرد مهمة.                                                                                    
+إنها السباق الأخير بين النجاة والفناء                                                                  "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+libraries = {
+&"": SubResource("AnimationLibrary_p1gyr")
+}
+autoplay = "animation"
+
+[connection signal="animation_finished" from="Control/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

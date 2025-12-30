@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://bglya7om80n46"]
+
+[ext_resource type="Texture2D" uid="uid://difglsmbfmw81" path="res://Textures/terrain.jpg" id="1_2klcf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_63lxe"]
+albedo_color = Color(0.603922, 0.658824, 0.298039, 1)
+albedo_texture = ExtResource("1_2klcf")
+uv1_triplanar = true
+
+[node name="Map" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 1.9417195, -0.42387438, 4.844139)
+material_override = SubResource("StandardMaterial3D_63lxe")
+use_collision = true
+size = Vector3(150, 0.002, 150)
+
+[node name="LargeDecorations" type="Node3D" parent="."]
+
+[node name="CryptWall" type="Node3D" parent="LargeDecorations"]
+
+[node name="GravesBack" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4354632, 5.527031)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.603208, -0.40959206, 0.6843789, 0, 0.85806507, 0.51354104, -0.797584, 0.309772, -0.5175917, 16.597519, 53.95655, -35.627712)
+light_color = Color(0.26666668, 0, 0, 1)
+light_energy = 4.629
+light_indirect_energy = 1.95
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+shadow_enabled = true
+shadow_bias = 0.0
+shadow_normal_bias = 0.0
+shadow_blur = 2.014
+directional_shadow_split_2 = 0.475
+directional_shadow_fade_start = 1.0
+directional_shadow_max_distance = 27.1
+
+[node name="OutsideWall" type="Node3D" parent="."]
+
+[node name="OutsideTrees" type="Node3D" parent="."]

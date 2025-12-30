@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bcy2qefmnwbmd"
+path="res://.godot/imported/Call of Duty Zombie 2 Sound Effect.mp3-baa9dcad63790d865988b94b76093486.mp3str"
+
+[deps]
+
+source_file="res://Call of Duty Zombie 2 Sound Effect.mp3"
+dest_files=["res://.godot/imported/Call of Duty Zombie 2 Sound Effect.mp3-baa9dcad63790d865988b94b76093486.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

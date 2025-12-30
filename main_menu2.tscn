@@ -1,0 +1,101 @@
+[gd_scene load_steps=13 format=3 uid="uid://2y01heatl8t0"]
+
+[ext_resource type="Script" uid="uid://je21pjd6lua1" path="res://main_menu.gd" id="1_ql85t"]
+[ext_resource type="Texture2D" uid="uid://dmc8e5blr1hcc" path="res://0040.jpg" id="2_ql85t"]
+[ext_resource type="Texture2D" uid="uid://dbxr01mr5ckd6" path="res://Cool Text - wanna try again 498047816672416.png" id="3_sjgr1"]
+[ext_resource type="Texture2D" uid="uid://3an2rij5yeup" path="res://cooltext498041818197170.png" id="4_yuf43"]
+[ext_resource type="AudioStream" uid="uid://ohcetim3oug0" path="res://Call Of Duty Black Ops 2  Effect Sound ByeBye.mp3" id="5_jlhlf"]
+
+[sub_resource type="Theme" id="Theme_fu7sn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jlhlf"]
+texture = ExtResource("2_ql85t")
+
+[sub_resource type="Theme" id="Theme_qe12f"]
+
+[sub_resource type="Theme" id="Theme_jix8l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_64gul"]
+texture = ExtResource("3_sjgr1")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_fu7sn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0k4wn"]
+texture = ExtResource("4_yuf43")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fu7sn")
+theme_type_variation = &"EDF"
+script = ExtResource("1_ql85t")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -978.0
+offset_top = -554.0
+offset_right = 968.0
+offset_bottom = 556.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jlhlf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+self_modulate = Color(0.8901533, 0.93848747, 0.97176594, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512
+anchor_top = 0.48600003
+anchor_right = 0.512
+anchor_bottom = 0.48600003
+offset_left = -433.04004
+offset_top = 248.12
+offset_right = 381.95996
+offset_bottom = 506.12
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_qe12f")
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+modulate = Color(0.47382653, 0, 0.06129511, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_jix8l")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_64gul")
+icon = SubResource("CanvasTexture_fu7sn")
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+modulate = Color(0.9433384, 1.0529122, 1.6861732, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_0k4wn")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 108.0
+offset_right = 713.0
+offset_bottom = 171.0
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_jlhlf")
+volume_db = 24.0
+autoplay = true
+attenuation = 0.20306341
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_Exit_pressed"]

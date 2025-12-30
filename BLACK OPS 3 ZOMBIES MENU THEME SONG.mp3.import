@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c655ig7tq4gro"
+path="res://.godot/imported/BLACK OPS 3 ZOMBIES MENU THEME SONG.mp3-f778bd9a7e3327f91236bbef3ee648c1.mp3str"
+
+[deps]
+
+source_file="res://BLACK OPS 3 ZOMBIES MENU THEME SONG.mp3"
+dest_files=["res://.godot/imported/BLACK OPS 3 ZOMBIES MENU THEME SONG.mp3-f778bd9a7e3327f91236bbef3ee648c1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
